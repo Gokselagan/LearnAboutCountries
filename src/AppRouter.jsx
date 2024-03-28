@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import { RegistrationForm } from "./modules/user/RegistrationForm";
 import { LogIn } from "./modules/user/LogIn";
-import { NewCity } from "./modules/cities/NewCity";
+import { CityQuiz } from "./modules/cities/CityQuiz";
 import { SearchBar } from "./modules/cities/SearchBar";
 import { CityList } from "./modules/cities/CityList";
 import { CityDetails } from "./modules/cities/CityDetails";
@@ -16,7 +16,7 @@ export const AppRouter = () => {
             </Route>
 
             <Route path="cities">
-                <Route path="new" element={<NewCity />} />
+                <Route path="new" element={<CityQuiz />} />
                 <Route path="details" element={<CityDetails />}/>
                 <Route index element={<Navigate to="/" replace={true}></Navigate>} />
             </Route>

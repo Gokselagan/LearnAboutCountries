@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 
-export const NewCity = () => {
+export const CityQuiz = () => {
 
     const cities = useSelector(state=>state.cities)
 
@@ -8,7 +8,7 @@ export const NewCity = () => {
 
     return(
         <>
-        New City
+        City Quiz
         </>
     )
 }
