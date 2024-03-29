@@ -18,10 +18,11 @@ export const citiesSlice = createSlice({
     updateCity(state, action) {
       const updatedCity = action.payload;
       state.cityList = state.cityList.map(city =>
-        city.name.official === updatedCity.name.official ? updatedCity : city
+        city.name.common === updatedCity.name.common ? updatedCity : city
       );
       state.selectedCity = updatedCity;
-    }
+    },
+
   },
 });
 

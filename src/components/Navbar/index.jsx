@@ -55,7 +55,7 @@ export const Navbar = () => {
                         </Stack>
 
                         <Stack>
-                            <Button component={Link} to="/cities/new"
+                            <Button component={Link} to="/cities/quiz"
                                 sx={{
                                     display: "flex",
                                     flexDirection: "column"

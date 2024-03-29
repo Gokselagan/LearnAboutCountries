@@ -16,7 +16,7 @@ export const AppRouter = () => {
             </Route>
 
             <Route path="cities">
-                <Route path="new" element={<CityQuiz />} />
+                <Route path="quiz" element={<CityQuiz />} />
                 <Route path="details" element={<CityDetails />}/>
                 <Route index element={<Navigate to="/" replace={true}></Navigate>} />
             </Route>
