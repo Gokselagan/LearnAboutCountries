@@ -1,40 +1,40 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { setCities, updateCity } from "../citiesSlice";
+import { setCountries, updateCountry } from "../countriesSlice";
 import { Grid, CardActionArea, CardContent, CardMedia, Typography, Box, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export const CityList = () => {
+export const CountryList = () => {
 
     const dispatch = useDispatch();
-    const cityList = useSelector(state => state.cities.cityList);
+    const countryList = useSelector(state => state.countries.countryList);
     const isSignedIn = useSelector(state => state.user.isSignedIn);
 
     useEffect(() => {
         fetch("https://restcountries.com/v3.1/all")
             .then(res => res.json())
-            .then((data) => dispatch(setCities(data)));
+            .then((data) => dispatch(setCountries(data)));
     }, [dispatch])
 
-    const handleBtnClick = (city) => {
-        dispatch(updateCity(city));
+    const handleBtnClick = (country) => {
+        dispatch(updateCountry(country));
     }
 
     return (
         <>
             {isSignedIn ? <Grid container spacing={3} justifyContent="center" sx={{ padding: "18px" }}>
-                {cityList.map((city) => (
-                    <Grid item xs={11} sm={6} md={4} lg={3} key={city.name.official} >
-                        <CardActionArea component={Link} to="/cities/details" onClick={() => handleBtnClick(city)} >
+                {countryList.map((country) => (
+                    <Grid item xs={11} sm={6} md={4} lg={3} key={country.name.official} >
+                        <CardActionArea component={Link} to="/countries/details" onClick={()=>handleBtnClick(country)} >
                             <CardMedia
                                 component="img"
                                 height="140"
-                                image={city.flags.svg}
-                                alt={city.flags.alt}
+                                image={country.flags.svg}
+                                alt={country.flags.alt}
                             />
                             <CardContent sx={{ backgroundColor: "lightgray", display: "flex", flexDirection: "column" }}>
                                 <Typography component="div" variant="h6" color="#000" sx={{ fontWeight: 600, fontSize: 18, textAlign: "center" }}>
-                                    {city.name.common}
+                                    {country.name.common}
                                 </Typography>
                             </CardContent>
                         </CardActionArea>

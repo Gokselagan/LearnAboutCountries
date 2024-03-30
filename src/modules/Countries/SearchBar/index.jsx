@@ -1,6 +1,6 @@
 import { Alert, Stack, TextField, Typography, Box, Grid } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { setCities } from "../citiesSlice";
+import { setCountries } from "../countriesSlice";
 import { useEffect, useState } from "react";
 
 export const SearchBar = () => {
@@ -20,7 +20,7 @@ export const SearchBar = () => {
             .then(res => res.json())
             .then((data) => {
                 if (data && data.length > 0) {
-                    dispatch(setCities(data));
+                    dispatch(setCountries(data));
                     setSearchError(null);
                     setCountry("");
                 } else {

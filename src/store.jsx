@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import {citiesSlice} from './modules/cities/citiesSlice';
+import {countriesSlice} from './modules/Countries/countriesSlice';
 import { userSlice } from './modules/user/userSlice';
 
 export default configureStore({
   reducer: {
-    cities: citiesSlice.reducer,
+    countries: countriesSlice.reducer,
     user: userSlice.reducer
   }
 })

@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import { RegistrationForm } from "./modules/user/RegistrationForm";
 import { LogIn } from "./modules/user/LogIn";
-import { CityQuiz } from "./modules/cities/CityQuiz";
-import { SearchBar } from "./modules/cities/SearchBar";
-import { CityList } from "./modules/cities/CityList";
-import { CityDetails } from "./modules/cities/CityDetails";
+import { CountryQuiz } from "./modules/Countries/CountryQuiz";
+import { SearchBar } from "./modules/Countries/SearchBar";
+import { CountryList } from "./modules/Countries/CountryList";
+import { CountryDetails } from "./modules/Countries/CountryDetails";
 
 export const AppRouter = () => {
     return (
@@ -15,9 +15,9 @@ export const AppRouter = () => {
                 <Route path="login" element={<LogIn />} />
             </Route>
 
-            <Route path="cities">
-                <Route path="quiz" element={<CityQuiz />} />
-                <Route path="details" element={<CityDetails />}/>
+            <Route path="countries">
+                <Route path="quiz" element={<CountryQuiz />} />
+                <Route path="details" element={<CountryDetails />}/>
                 <Route index element={<Navigate to="/" replace={true}></Navigate>} />
             </Route>
 
@@ -26,7 +26,7 @@ export const AppRouter = () => {
                 element={
                     <>
                         <SearchBar />
-                        <CityList />
+                        <CountryList />
                     </>
                 }
             />

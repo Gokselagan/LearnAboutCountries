@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCities } from '../../modules/cities/citiesSlice';
+import { setCountries } from '../../modules/Countries/countriesSlice';
 import { toggleSignIn } from '../../modules/user/userSlice';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
@@ -18,7 +18,7 @@ export const Navbar = () => {
     const handleHomeBtnClick = () => {
         fetch("https://restcountries.com/v3.1/all")
             .then(res => res.json())
-            .then((data) => dispatch(setCities(data)));
+            .then((data) => dispatch(setCountries(data)));
     }
 
     const handleLogOutBtn = () => {
@@ -55,7 +55,7 @@ export const Navbar = () => {
                         </Stack>
 
                         <Stack>
-                            <Button component={Link} to="/cities/quiz"
+                            <Button component={Link} to="/countries/quiz"
                                 sx={{
                                     display: "flex",
                                     flexDirection: "column"
@@ -64,7 +64,7 @@ export const Navbar = () => {
                                 <QuizIcon
                                     sx={{ color: "white", fontSize: '32px' }}
                                 />
-                                <Typography color="white">City Quiz</Typography>
+                                <Typography color="white">Country Quiz</Typography>
                             </Button>
                         </Stack>
 

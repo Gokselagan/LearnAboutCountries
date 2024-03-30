@@ -2,9 +2,9 @@ import { Box, Stack, Grid, Typography, Link } from "@mui/material";
 import { useSelector } from "react-redux";
 import TouchAppIcon from '@mui/icons-material/TouchApp';
 
-export const CityDetails = () => {
+export const CountryDetails = () => {
 
-    const details = useSelector(state => state.cities.selectedCity);
+    const details = useSelector(state => state.countries.selectedCountry);
 
 
     return (
