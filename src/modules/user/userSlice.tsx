@@ -23,6 +23,4 @@ export const userSlice = createSlice({
 });
 
 export const { toggleSignIn, updateUser, registerUser } = userSlice.actions;
-
-
 export default userSlice.reducer;

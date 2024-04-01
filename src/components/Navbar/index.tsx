@@ -8,12 +8,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setCountries } from '../../modules/Countries/countriesSlice';
 import { toggleSignIn } from '../../modules/user/userSlice';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import { userState } from '../../modules/user/Models';
 
 export const Navbar = () => {
 
     const dispatch = useDispatch();
-    const user = useSelector(state => state.user.registeredUser);
-    const isSignedIn = useSelector(state => state.user.isSignedIn);
+    const user = useSelector((state:{user:userState}) => state.user.registeredUser);
+    const isSignedIn:boolean = useSelector((state:{user:{isSignedIn:boolean}}) => state.user.isSignedIn);
 
     const handleHomeBtnClick = () => {
         fetch("https://restcountries.com/v3.1/all")

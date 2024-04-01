@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import { Box, Container, Grid, TextField, Typography, FormControl, InputLabel, OutlinedInput, InputAdornment, IconButton, FormControlLabel, Button, Snackbar, FormHelperText } from "@mui/material";
+import { Box, Container, Grid, TextField, Typography, FormControl, InputLabel, OutlinedInput, InputAdornment, IconButton, FormControlLabel, Button, FormHelperText } from "@mui/material";
 import { useState } from "react";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
@@ -10,10 +10,11 @@ import Checkbox from '@mui/material/Checkbox';
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../userSlice";
+import { RegistrationFormProps } from "../Models";
 
 export const RegistrationForm = () => {
 
-	const [showPassword, setShowPassword] = useState(false);
+	const [showPassword, setShowPassword] = useState<boolean>(false);
     const dispatch = useDispatch();
 
     const navigate = useNavigate();
@@ -23,9 +24,9 @@ export const RegistrationForm = () => {
 		handleSubmit,
 		formState: { errors },
 		reset
-	} = useForm();
+	} = useForm<RegistrationFormProps>();
 
-	const onSubmit = (data) => {
+	const onSubmit = (data:RegistrationFormProps) => {
         dispatch(registerUser(data))
 		console.log(data);
 		reset();
@@ -51,7 +52,7 @@ export const RegistrationForm = () => {
 								fullWidth
 								id="firstName"
 								label="First Name"
-                                error={errors.firstName}
+                                error={!!errors.firstName}
                                 helperText={errors.firstName ? errors.firstName.message : ""}
 								{...register("firstName",{
                                     required: "User Last First Name is required"
@@ -65,7 +66,7 @@ export const RegistrationForm = () => {
 								fullWidth
 								id="lastName"
 								label="Last Name"
-                                error={errors.lastName}
+                                error={!!errors.lastName}
                                 helperText={errors.lastName ? errors.lastName.message : ""}
 								{...register("lastName",{
                                     required: "User Last Name is required"

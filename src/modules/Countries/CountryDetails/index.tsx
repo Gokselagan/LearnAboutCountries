@@ -1,16 +1,15 @@
 import { Box, Stack, Grid, Typography, Link } from "@mui/material";
 import { useSelector } from "react-redux";
 import TouchAppIcon from '@mui/icons-material/TouchApp';
+import { Countries } from "../Models";
 
 export const CountryDetails = () => {
 
-    const details = useSelector(state => state.countries.selectedCountry);
-
+    const details: Countries | null = useSelector((state:{countries:{selectedCountry: Countries | null}}) => state.countries.selectedCountry);
 
     return (
         <Box>
             {details ? (
-
                 <Grid container spacing={2} flexDirection="column" alignItems="center">
                     <Grid item xs={12} md={9} display="flex" flexDirection="row" justifyContent="space-between" alignItems="center" gap="20px" textAlign="center">
                         <Stack>
@@ -41,11 +40,14 @@ export const CountryDetails = () => {
                             </Typography>
 
                             <Typography variant="body1" sx={{textIndent:"2rem", marginBottom:"16px"}}>
-                                {details.name.common}, with its capital "{details.capital}", is located on the continent of "{details.region}". The country's population is {details.population.toLocaleString()} and its official language is {Object.keys(details.languages).map(language => details.languages[language])}. {details.name.common} {details.borders? <> shares its borders with {details.borders.map((border) => (border) + "," + " ")}</> : <>doesn't have a border with another country</>}.
+                                {details.name.common}, with its capital "{details.capital}", is located on the continent of "{details.region}". The country's population is {details.population.toLocaleString()} and its official language is {details.languages && Object.keys(details.languages).map(language => details.languages && details.languages[language])}. {details.name.common} {details.borders? <> shares its borders with {details.borders.map((border) => (border) + "," + " ")}</> : <>doesn't have a border with another country</>}.
                             </Typography>
 
                             <Typography variant="body1" sx={{textIndent:"2rem"}}>
-                                The vehicle licence plate code for {details.name.common} is "{details.car.signs}" and vehicles adhere to {details.car.side === "right" ? <>right-hand</> : <>left-hand</>} traffic rules. The country's time zone is set to "{details.timezones}". {details.name.common} is situated at the crossroads of the continents of {details.continents[0]} {details.continents[1] ? <> and {details.continents[1]} {details.continents[2] ? <>and {details.continents[2]}</> : null}</> : null}.
+                                The vehicle licence plate code for {details.name.common} is "{details.car.signs}" and vehicles adhere to {details.car.side === "right" ? <>right-hand</> : <>left-hand</>} traffic rules. The country's time zone is set to "{details.timezones}". {details.name.common} is situated at the crossroads of the continents of {details.continents && details.continents[0]} 
+                                {details.continents?.[1] ? `${details.continents[1]}` : ""}
+                                {details.continents?.[2] ? `${details.continents[2]}`: ""}
+                               .
                             </Typography>
                         </Box>
                     </Grid>
