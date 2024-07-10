@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+Countries Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application developed using React.js and Material-UI. It provides a quiz feature about countries, allowing users to test their knowledge about various countries and their details.
 
-## Available Scripts
+Features
 
-In the project directory, you can run:
+User Authentication: Users can register and log in securely using authentication features.
+Country Quiz: Take a quiz to test your knowledge about different countries.
+Country Details: Explore detailed information about specific countries.
+Responsive Design: The application is designed to be responsive, ensuring a seamless experience across different devices.
 
-### `npm start`
+Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React.js: Frontend library for building user interfaces.
+Material-UI: React components for faster and easier web development.
+React Router: Declarative routing for React applications.
+Redux Toolkit: State management library for predictable state containers.
+React Hook Form: Performant, flexible, and extensible forms with easy-to-use validation.
+REST Countries API: Provides country information via a RESTful API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Installation and Setup
 
-### `npm test`
+Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install dependencies:
+npm install
 
-### `npm run build`
+Start the development server:
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open the application:
+Open your browser and go to http://localhost:3000 to view the app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+How to Use
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Registration: Create a new account to start using the application.
+Login: Log in with your credentials.
+Navigation: Use the navigation bar to explore different sections of the app (Home, Country Quiz, Log Out).
+Quiz: Test your knowledge about countries by taking the quiz.
+Country Details: View detailed information about a specific country.
 
-### `npm run eject`
+Contributing
+Contributions are welcome! If you have any suggestions, improvements, or issues, please create an issue or submit a pull request.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
