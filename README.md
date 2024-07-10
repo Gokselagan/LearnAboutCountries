@@ -20,7 +20,7 @@ REST Countries API: Provides country information via a RESTful API.
 
 Installation and Setup
 
-Clone the repository:
+Clone the repository: https://github.com/Gokselagan/LearnAboutCountries.git
 
 Install dependencies:
 npm install
