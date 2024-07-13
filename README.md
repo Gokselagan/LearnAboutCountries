@@ -54,6 +54,7 @@ Open your browser and go to http://localhost:3000 to view the app.
 #Screenshoots
 
 `![](../LearnAboutCountries/src/assets/Screenshot%20LogIn%20Page.png)`
+
 `![](../LearnAboutCountries/src/assets/Screenshot%20Quiz%20Page.png)`
 
 
