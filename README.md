@@ -1,8 +1,11 @@
-##Countries Quiz App
+## Countries Quiz App
 
 This project is a web application developed using React.js and Material-UI. It provides a quiz feature about countries, allowing users to test their knowledge about various countries and their details.
 
-#Features
+This project is deployed on [Vercel](https://vercel.com). You can view the live version https://vercel.com/goksels-projects-d119d763/learn-about-countries .
+
+
+# Features
 
 --# User Authentication: Users can register and log in securely using authentication features.
 
@@ -12,7 +15,7 @@ This project is a web application developed using React.js and Material-UI. It p
 
 --# Responsive Design: The application is designed to be responsive, ensuring a seamless experience across different devices.
 
-#Technologies Used
+# Technologies Used
 
 --# React.js: Frontend library for building user interfaces.
 
@@ -26,7 +29,7 @@ This project is a web application developed using React.js and Material-UI. It p
 
 --# REST Countries API: Provides country information via a RESTful API.
 
-#Installation and Setup
+# Installation and Setup
 
 --# Clone the repository: https://github.com/Gokselagan/LearnAboutCountries.git
 
@@ -39,7 +42,7 @@ npm start
 --# Open the application:
 Open your browser and go to http://localhost:3000 to view the app.
 
-#How to Use
+# How to Use
 
 --# Registration: Create a new account to use the application.
 
@@ -51,7 +54,7 @@ Open your browser and go to http://localhost:3000 to view the app.
 
 --# Country Details: View detailed information about a specific country.
 
-#Screenshoots
+# Screenshoots
 
 --# QUIZ PAGE
 
@@ -63,6 +66,6 @@ Open your browser and go to http://localhost:3000 to view the app.
 
 
 
-#Contributing
+# Contributing
 Contributions are welcome! Please create an issue or submit a pull request if you have any suggestions, improvements, or issues.
 
