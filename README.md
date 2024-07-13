@@ -53,9 +53,8 @@ Open your browser and go to http://localhost:3000 to view the app.
 
 #Screenshoots
 
-`![](../LearnAboutCountries/src/assets/Screenshot%20LogIn%20Page.png)`
-
-`![](../LearnAboutCountries/src/assets/Screenshot%20Quiz%20Page.png)`
+<img width="1440" alt="Screenshot Quiz Page" src="https://github.com/user-attachments/assets/b84f89a2-b0b5-4745-a7b6-ec507e259e48">
+<img width="1440" alt="Screenshot LogIn Page" src="https://github.com/user-attachments/assets/85676153-5d2d-45ab-b014-c349e80c1dcd">
 
 
 
